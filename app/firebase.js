@@ -1,13 +1,9 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// eslint-disable-next-line no-unused-vars
 import { getFirestore } from "firebase/firestore";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAnalytics, isSupported } from "firebase/analytics";
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyAzcTxUSjexnaxmwB-tv0sQUgoLpLaTasI",
   authDomain: "snacksnap-1453d.firebaseapp.com",
@@ -20,6 +16,16 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+// Initialize Firebase Analytics only in the client-side
 // eslint-disable-next-line no-unused-vars
-const analytics = getAnalytics(app);
-export const db =getFirestore(app);
+let analytics;
+if (typeof window !== "undefined") {
+  isSupported().then((supported) => {
+    if (supported) {
+      analytics = getAnalytics(app);
+    }
+  });
+}
+
+export const db = getFirestore(app);
