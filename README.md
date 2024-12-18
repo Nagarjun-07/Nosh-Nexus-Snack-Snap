@@ -1,3 +1,10 @@
+video executed : https://youtu.be/8J2hwjagCus?si=qza0V3Ul6txu3d43
+Demo : nosh-nexus-snack-snap.vercel.app
+![image](https://github.com/user-attachments/assets/a9043660-3b44-49fa-a4f4-05b8a3bcaf79)
+![image](https://github.com/user-attachments/assets/59e9058f-3aed-43b0-8d56-2676a01168d0)
+![image](https://github.com/user-attachments/assets/66f96080-5dc0-49d1-ad82-23b9e92e78e0)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
